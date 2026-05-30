@@ -13,6 +13,13 @@ dist
 dist-ssr
 *.local
 
+# AI Agents / Claude Code config and history
+.agents/
+.claude/
+.stitch/
+skills-lock.json
+
+
 config/mcp_config.json
 # Editor directories and files
 .vscode/*
