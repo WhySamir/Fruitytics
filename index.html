@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src 'self' http://localhost:8000 ws://localhost:5173 https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; base-uri 'self'; form-action 'self';"
+    />
+
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- X-Frame-Options: Prevent clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+
+    <!-- Referrer Policy: Control referrer information -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Permissions Policy: Restrict browser features -->
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+    />
+
+    <title>FRUITYTICS</title>
+    <script>
+      // SECURITY: Inline script is necessary for theme initialization
+      // CSP allows 'unsafe-inline' for this specific use case
+      // In production, consider moving to external script or server-side rendering
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem('theme-color');
+          if (savedTheme === 'rose') {
+            const root = document.documentElement;
+            root.style.setProperty('--primary', '#e11d48');
+            root.style.setProperty('--primary-light', '#fda4af');
+            root.style.setProperty('--primary-dark', '#be123c');
+          }
+        } catch (e) {
+          // Silently fail - theme is not critical
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

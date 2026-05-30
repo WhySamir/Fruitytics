@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Geist+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --foundry-black: #09090B;
+  --machined-steel: #18181B;
+  --brushed-zinc: #27272A;
+  --cold-concrete: #A1A1AA;
+  --optical-white: #FAFAFA;
+  --safety-orange: #F97316;
+  --success-green: #22C55E;
+}
+
+@theme {
+  /* Colors */
+  --color-background: var(--foundry-black);
+  --color-surface: var(--machined-steel);
+  --color-surface-low: var(--brushed-zinc);
+  --color-muted: var(--cold-concrete);
+  --color-foreground: var(--optical-white);
+  --color-accent: var(--safety-orange);
+  --color-success: var(--success-green);
+
+  /* Shared Tones */
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-50: #fafafa;
+  --color-orange-500: #f97316;
+
+  /* Typography */
+  --font-headline: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  --font-label: "Geist Mono", monospace;
+
+  /* Constraints */
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+}
+
+/* Base Styles */
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-body);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-headline;
+}
+
+@layer utilities {
+  .machined-gradient {
+    background: linear-gradient(180deg, #F97316 0%, #D95D00 100%);
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

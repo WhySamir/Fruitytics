@@ -1,0 +1,26 @@
+{
+  "name": "projects/7888330537300730816",
+  "projectId": "7888330537300730816",
+  "title": "FruitVerse Nutrition - Minimalist Industrial",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "DARK",
+    "font": "OUTFIT",
+    "roundness": "ROUND_NONE",
+    "customColor": "#F97316",
+    "saturation": 2
+  },
+  "screens": {
+    "index": {
+      "id": "704955576a9843aeb98e82c9070fe0a8",
+      "sourceScreen": "projects/7888330537300730816/screens/704955576a9843aeb98e82c9070fe0a8",
+      "x": 0,
+      "y": 0,
+      "width": 780,
+      "height": 3368
+    }
+  }
+}
